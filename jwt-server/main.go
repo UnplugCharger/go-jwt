@@ -11,7 +11,7 @@ import (
 )
 var MySigningKey= []byte(os.Getenv("SECRET_KEY"))
 
-func GetJWT(string , error)  {
+func GetJWT()(string , error)  {
 	token := jwt.New(jwt.SigningMethodHS256)
 	claims := token.Claims.(jwt.MapClaims)
 
